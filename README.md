@@ -40,3 +40,16 @@ npx cypress open
 ```bash
 npx cypress run
 ```
+
+
+## ⚙️ Integração Contínua (GitHub Actions)
+
+[![Cypress Tests](https://github.com/oct-gustavo/ebac-cypress-samples/actions/workflows/cypress.yml/badge.svg)](https://github.com/oct-gustavo/ebac-cypress-samples/actions/workflows/cypress.yml)
+
+O pipeline está definido em [`.github/workflows/cypress.yml`](.github/workflows/cypress.yml) e executa automaticamente os testes Cypress (modo headless, no Chrome):
+
+- a cada **push** em qualquer branch;
+- a cada **pull request** para a branch `main`;
+- manualmente, pela aba **Actions** (`workflow_dispatch`).
+
+Em caso de falha, os screenshots são salvos como artefatos da execução.
